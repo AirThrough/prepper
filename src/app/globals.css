@@ -30,7 +30,7 @@
   --chart-4: oklch(0.553 0.195 38.402);
   --chart-5: oklch(0.47 0.157 37.304);
   --radius: 0.45rem;
-  --sidebar: oklch(0.987 0.002 197.1);
+  --sidebar: oklch(100% 0.00011 271.152);
   --sidebar-foreground: oklch(0.148 0.004 228.8);
   --sidebar-primary: oklch(0.591 0.293 322.896);
   --sidebar-primary-foreground: oklch(0.977 0.017 320.058);
@@ -38,6 +38,7 @@
   --sidebar-accent-foreground: oklch(0.218 0.008 223.9);
   --sidebar-border: oklch(0.925 0.005 214.3);
   --sidebar-ring: oklch(0.723 0.014 214.4);
+  --header-height: 4rem;
 }
 
 @theme inline {
@@ -82,6 +83,7 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --spacing-header-height: var(--header-height);
 }
 
 .dark {
@@ -116,6 +118,7 @@
   --sidebar-accent-foreground: oklch(0.987 0.002 197.1);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.56 0.021 213.5);
+  --spacing-header-height: var(--header-height);
 }
 
 @layer base {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono, Instrument_Sans, Outfit } from "next/font/google"
+import { Instrument_Sans, Outfit } from "next/font/google"
 import "./globals.css"
-import { cn } from "@/lib/utils"
+import { cn } from "@/shared/lib/utils"
 import { AppHeader } from "@/widgets/AppHeader"
 
 const instrumentSans = Instrument_Sans({
@@ -27,9 +27,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         outfit.variable,
       )}
     >
-      <body>
+      <body className="flex flex-col min-h-svh">
         <AppHeader />
-        <div className="min-h-full overflow-hidden">{children}</div>
+        <div className="flex-1 min-h-0 overflow-hidden relative">
+          {children}
+        </div>
       </body>
     </html>
   )
